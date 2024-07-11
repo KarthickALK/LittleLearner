@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little Learners</title>
 
-    <link href="assets/Title_logo.png" rel="icon">
+    <link href="<?php echo base_url() ?>/assets/Title_logo.png" rel="icon">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -44,27 +44,36 @@
     <nav
         class="navbar navbar-expand-lg sticky-top navbar-light bg-light border border-3 border-dark rounded-3 mx-2 mb-2">
         <div class="container-fluid d-flex justify-content-between">
-            <a href="#"><img src="assets/Logo.png" alt="logo"></a>
+            <a href="#"><img src="<?php echo base_url() ?>/assets/Logo.png" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item border-left border-right">
+                    <li class="nav-item">
                         <a class="nav-link text-dark px-4" href="#">Home</a>
                     </li>
-                    <li class="nav-item border-left border-right">
+                    <li class="nav-item">
                         <a class="nav-link text-dark px-4" href="#Aboutus">About Us</a>
                     </li>
-                    <li class="nav-item border-left border-right">
+                    <li class="nav-item">
                         <a class="nav-link text-dark px-4" href="#our-benefits">Academics</a>
                     </li>
-                    <li class="nav-item border-left border-right">
-                        <a class="nav-link text-dark px-4"
-                            href="<?php echo base_url() . "Student/admissionForm" ?>">Admissions</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark px-4" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admissions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="nav-item ms-3">
+                                <a class="nav-link text-dark"
+                                    href="<?php echo base_url() . "Student/admissionForm" ?>">New Admission</a>
+                            </li>
+                            <li><a class="nav-link text-dark ms-3" href="<?php echo base_url() . "Student/studentList" ?>">Admissions List</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item border-left border-right">
+                    <li class="nav-item">
                         <a class="nav-link text-dark px-4" href="#footer">Contact</a>
                     </li>
                 </ul>
@@ -75,7 +84,8 @@
     <!-- Banner -->
     <div class="d-lg-flex justify-content-between mx-2 mx-lg-5">
         <div class="text-center">
-            <img src="<?php echo base_url()?>/assets/Banner_Image.png" class="banner_imag img-fluid text-center" alt="Banner">
+            <img src="<?php echo base_url() ?>/assets/Banner_Image.png" class="banner_imag img-fluid text-center"
+                alt="Banner">
         </div>
         <div class="text-center col-lg-6 p-2 p-md-5 my-auto">
             <p><u>Welcome to Little Learners Academy</u></p>
@@ -113,14 +123,14 @@
                 we aim to lay a strong foundation for your child's future.</p>
         </div>
         <div class="container d-md-flex justify-content-evenly text-center">
-            <img src="<?php echo base_url()?>/assets/card01.png" alt="1" class="img-fluid my-1 mx-1">
-            <img src="<?php echo base_url()?>/assets/card2.png" alt="2" class="img-fluid my-1 mx-1">
-            <img src="<?php echo base_url()?>/assets/card3.png" alt="3" class="img-fluid my-1 mx-1">
+            <img src="<?php echo base_url() ?>/assets/card01.png" alt="1" class="img-fluid my-1 mx-1">
+            <img src="<?php echo base_url() ?>/assets/card2.png" alt="2" class="img-fluid my-1 mx-1">
+            <img src="<?php echo base_url() ?>/assets/card3.png" alt="3" class="img-fluid my-1 mx-1">
         </div>
         <div class="container d-md-flex justify-content-evenly text-center">
-            <img src="<?php echo base_url()?>/assets/card4.png" alt="4" class="img-fluid my-1 mx-1">
-            <img src="<?php echo base_url()?>/assets/card5.png" alt="5" class="img-fluid my-1 mx-1">
-            <img src="<?php echo base_url()?>/assets/card6.png" alt="6" class="img-fluid my-1 mx-1">
+            <img src="<?php echo base_url() ?>/assets/card4.png" alt="4" class="img-fluid my-1 mx-1">
+            <img src="<?php echo base_url() ?>/assets/card5.png" alt="5" class="img-fluid my-1 mx-1">
+            <img src="<?php echo base_url() ?>/assets/card6.png" alt="6" class="img-fluid my-1 mx-1">
         </div>
     </div>
 
@@ -135,9 +145,9 @@
                 both academically and emotionally.</p>
         </div>
         <div class="container d-md-flex justify-content-evenly text-center ">
-            <img src="<?php echo base_url()?>/assets/testimonial1.png" alt="1" class="img-fluid my-1 mx-3">
-            <img src="<?php echo base_url()?>/assets/testimonial2.png" alt="2" class="img-fluid my-1 mx-3">
-            <img src="<?php echo base_url()?>/assets/testimonial3.png" alt="3" class="img-fluid my-1 mx-3">
+            <img src="<?php echo base_url() ?>/assets/testimonial1.png" alt="1" class="img-fluid my-1 mx-3">
+            <img src="<?php echo base_url() ?>/assets/testimonial2.png" alt="2" class="img-fluid my-1 mx-3">
+            <img src="<?php echo base_url() ?>/assets/testimonial3.png" alt="3" class="img-fluid my-1 mx-3">
         </div>
     </div>
 
@@ -151,8 +161,8 @@
                 fostering a love for learning and personal growth.</p>
         </div>
         <div class="container d-md-flex justify-content-evenly text-center">
-            <img src="<?php echo base_url()?>/assets/Mission.png" alt="1" class="img-fluid my-1">
-            <img src="<?php echo base_url()?>/assets/Vision.png" alt="2" class="img-fluid my-1">
+            <img src="<?php echo base_url() ?>/assets/Mission.png" alt="1" class="img-fluid my-1">
+            <img src="<?php echo base_url() ?>/assets/Vision.png" alt="2" class="img-fluid my-1">
         </div>
     </div>
 
@@ -160,7 +170,7 @@
     <footer class="border border-3 border-dark rounded bg-light p-2 p-md-5 m-2 m-md-5" id="footer">
         <div class="d-md-flex justify-content-evenly py-4 px-5">
             <div class="col-md-6">
-                <img src="<?php echo base_url()?>/assets/Footer Logo.png" alt="logo">
+                <img src="<?php echo base_url() ?>/assets/Footer Logo.png" alt="logo">
                 <p class="pt-3">We believe in the power of play to foster creativity, problem-solving skills, and
                     imagination.</p>
             </div>
@@ -185,4 +195,5 @@
     </footer>
 
 </body>
+
 </html>

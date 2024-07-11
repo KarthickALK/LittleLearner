@@ -24,8 +24,37 @@ class Student extends CI_Controller
     public function admissionFormData()
     {
         $profileDetails = $this->StudentModel->newStudent();
-        $this->admissionForm();
+        redirect('Student/admissionForm/');
     }
-    
+
+    public function studentList()
+    {
+        $this->data['method'] = "list";
+        $student = $this->StudentModel->getStudentList();
+        $this->data['studentList'] = $student;
+        $this->load->view('studentList', $this->data);
+    }
+
+    public function studentUpdate()
+    {
+        $tableId = $this->uri->segment(3);
+        $student = $this->StudentModel->studentDetail($tableId);
+        $this->data['studentList'] = $student;
+         $this->data['method'] = "updateForm";
+        $this->load->view('studentList', $this->data);
+    }
+
+    public function admissionFormUpdate()
+    {
+        $profileDetails = $this->StudentModel->updateStudent();
+        redirect('Student/studentList/');
+    }
+
+    public function studentDelete()
+    {
+        $tableId = $this->uri->segment(3);
+        $this->StudentModel->deleteStudent($tableId);
+        redirect('Student/studentList/');
+    }
 
 }
